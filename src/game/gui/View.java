@@ -1,6 +1,7 @@
 package game.gui;
 
 import javafx.geometry.Insets;
+import javafx.geometry.Orientation;
 import javafx.scene.control.*;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.input.MouseEvent;
@@ -109,7 +110,6 @@ public class View extends Application {
 	private ArrayList<Label> titans5labelsh = new ArrayList<>();
 
 	//HARD
-	//HARD Jomana
 	private Label dangerlevel1H = new Label("Danger Level= ");
 	private Label dangerlevel2H = new Label("Danger Level= ");
 	private Label dangerlevel3H = new Label("Danger Level= ");
@@ -589,15 +589,15 @@ public class View extends Application {
 
 		Instructions.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent event) {
-        mediaPlayer.seek(Duration.ZERO); 
+        mediaPlayer.seek(Duration.ZERO);
 			  mediaPlayer.play();
 				primaryStage.setScene(s3);
 				}
 				});
-				
-		back.setOnAction(new EventHandler<ActionEvent>() {			
+
+		back.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent event) {
-			    mediaPlayer.seek(Duration.ZERO); 
+			    mediaPlayer.seek(Duration.ZERO);
 			    mediaPlayer.play();
 				primaryStage.setScene(s1);
 				}
@@ -673,18 +673,24 @@ public class View extends Application {
 		lane1weaponHB.setTranslateX(-580);
 		lane1weaponHB.setMaxWidth(180);
 		lane1weaponHB.setMaxHeight(100);
+		lane1weaponHB.setOrientation(Orientation.HORIZONTAL);
+		lane1weaponHB.setStyle("-fx-scale-x: -1;");
 
 		lane2weaponHB.setPrefWidth(150);
 		lane2weaponHB.setTranslateY(-8);
 		lane2weaponHB.setTranslateX(-580);
 		lane2weaponHB.setMaxWidth(180);
 		lane2weaponHB.setMaxHeight(100);
+		lane2weaponHB.setOrientation(Orientation.HORIZONTAL);
+		lane2weaponHB.setStyle("-fx-scale-x: -1;");
 
 		lane3weaponHB.setPrefWidth(150);
 		lane3weaponHB.setTranslateY(-8);
 		lane3weaponHB.setTranslateX(-580);
 		lane3weaponHB.setMaxWidth(180);
 		lane3weaponHB.setMaxHeight(100);
+		lane3weaponHB.setOrientation(Orientation.HORIZONTAL);
+		lane3weaponHB.setStyle("-fx-scale-x: -1;");
 
 
 		lane1titans.setPrefWidth(150);
@@ -1196,30 +1202,40 @@ public class View extends Application {
 		lane1weaponFlow.setTranslateX(-580);
 		lane1weaponFlow.setMaxWidth(230);
 		lane1weaponFlow.setMaxHeight(100);
+		lane1weaponFlow.setOrientation(Orientation.HORIZONTAL);
+		lane1weaponFlow.setStyle("-fx-scale-x: -1;");
 
 		lane2weaponFlow.setPrefWidth(150);
 		lane2weaponFlow.setTranslateY(-8);
 		lane2weaponFlow.setTranslateX(-580);
 		lane2weaponFlow.setMaxWidth(230);
 		lane2weaponFlow.setMaxHeight(100);
+		lane2weaponFlow.setOrientation(Orientation.HORIZONTAL);
+		lane2weaponFlow.setStyle("-fx-scale-x: -1;");
 
 		lane3weaponFlow.setPrefWidth(150);
 		lane3weaponFlow.setTranslateY(-8);
 		lane3weaponFlow.setTranslateX(-580);
 		lane3weaponFlow.setMaxWidth(230);
 		lane3weaponFlow.setMaxHeight(100);
+		lane3weaponFlow.setOrientation(Orientation.HORIZONTAL);
+		lane3weaponFlow.setStyle("-fx-scale-x: -1;");
 
 		lane4weaponFlow.setPrefWidth(150);
 		lane4weaponFlow.setTranslateY(-8);
 		lane4weaponFlow.setTranslateX(-580);
 		lane4weaponFlow.setMaxWidth(230);
 		lane4weaponFlow.setMaxHeight(100);
+		lane4weaponFlow.setOrientation(Orientation.HORIZONTAL);
+		lane4weaponFlow.setStyle("-fx-scale-x: -1;");
 
 		lane5weaponFlow.setPrefWidth(150);
 		lane5weaponFlow.setTranslateY(-8);
 		lane5weaponFlow.setTranslateX(-580);
 		lane5weaponFlow.setMaxWidth(230);
 		lane5weaponFlow.setMaxHeight(100);
+		lane5weaponFlow.setOrientation(Orientation.HORIZONTAL);
+		lane5weaponFlow.setStyle("-fx-scale-x: -1;");
 
 		//progressbars
 		wallHealth1H.setPrefWidth(75);
