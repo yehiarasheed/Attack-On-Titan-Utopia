@@ -2509,6 +2509,10 @@ public class View extends Application {
 	}
 
 	private void displayAlert(String title, String message) {
+		Media alertMessageSound = new Media(new File("src/assets/audio/alerts/AlertMessageSound.mp3").toURI().toString());
+		MediaPlayer alertSoundMediaPlayer = new MediaPlayer(alertMessageSound);
+		alertSoundMediaPlayer.seek(Duration.ZERO);
+		alertSoundMediaPlayer.play();
 		Stage alertStage = new Stage();
 		alertStage.setTitle(title);
 		alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/assets/images/ui/icons/Icon.jpeg")));
@@ -2530,6 +2534,10 @@ public class View extends Application {
 	}
 
 	private void displayAlertGameOver(String title, String message) {
+		Media alertMessageSound = new Media(new File("src/assets/audio/alerts/AlertMessageSound.mp3").toURI().toString());
+		MediaPlayer alertSoundMediaPlayer = new MediaPlayer(alertMessageSound);
+		alertSoundMediaPlayer.seek(Duration.ZERO);
+		alertSoundMediaPlayer.play();
 		Stage alertStage = new Stage();
 		alertStage.setTitle(title);
 		alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/assets/images/ui/icons/Icon.jpeg")));
@@ -2564,7 +2572,6 @@ public class View extends Application {
 			 titans2ProgressBars = new HashMap<Titan,ProgressBar>();
 			 titans3ProgressBars = new HashMap<Titan,ProgressBar>();
             primaryStage.show();
-
 		});
 
 		VBox pane = new VBox(15);
