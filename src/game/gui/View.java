@@ -75,7 +75,7 @@ public class View extends Application {
 	private FlowPane lane1titans = new FlowPane();
 	private FlowPane lane2titans = new FlowPane();
 	private FlowPane lane3titans = new FlowPane();
-	private Image lane = new Image("lane with wall.jpeg");
+	private Image lane = new Image(getClass().getResourceAsStream("/assets/images/ui/lanes/LaneAndWall.jpeg"));
 	private ImageView lane1 = new ImageView(lane);
 	private ImageView lane2 = new ImageView(lane);
 	private ImageView lane3 = new ImageView(lane);
@@ -177,7 +177,7 @@ public class View extends Application {
 	@Override
 	public void start(Stage s) throws Exception {
 		primaryStage.setFullScreen(false);
-		File file = new File("src/Intro.mp4");
+		File file = new File("src/assets/intro/GameIntro.mp4");
 		Media media = new Media(file.toURI().toString());
 		MediaPlayer video = new MediaPlayer(media);
 		MediaView mediaView = new MediaView(video);
@@ -216,7 +216,7 @@ public class View extends Application {
 		root.setTranslateY(20);
 		Instructions.setPrefHeight(26);
 		Instructions.setPrefWidth(300);
-		InputStream is = getClass().getResourceAsStream("/SpaceGames.otf");
+		InputStream is = getClass().getResourceAsStream("/assets/fonts/SpaceGames.otf");
 		Font font = Font.loadFont(is,16);
 		label.setFont(font);
 		Instructions.setFont(font);
@@ -241,19 +241,19 @@ public class View extends Application {
 		));
 		timeline.play();
 
-		Image cursorImage = new Image(getClass().getResourceAsStream("/Cursor.png"));
+		Image cursorImage = new Image(getClass().getResourceAsStream("/assets/images/ui/cursors/Cursor.png"));
 		Cursor = new ImageCursor(cursorImage, cursorImage.getWidth()/2, cursorImage.getHeight()/2);
 		s1.setCursor(Cursor);
 
 		primaryStage.setTitle("Attack on Titan: Utopia");
 		//add icon
-		Image icon = new Image("icon.jpeg");
+		Image icon = new Image(getClass().getResourceAsStream("/assets/images/ui/icons/Icon.jpeg"));
 		//add bg
-		Image backgroundImage = new Image("Backg.jpg");
+		Image backgroundImage = new Image(getClass().getResourceAsStream("/assets/images/ui/backgrounds/Background.jpg"));
 		ImagePattern backIP = new ImagePattern(backgroundImage);
 		s1.setFill(backIP);
 		primaryStage.setScene(s1);
-		Image logoPic = new Image("logo.png");
+		Image logoPic = new Image(getClass().getResourceAsStream("/assets/images/ui/logo/GameLogo.png"));
 		ImageView logo = new ImageView(logoPic);
 		logo.setFitHeight(200);
 		logo.setFitWidth(500);
@@ -261,9 +261,9 @@ public class View extends Application {
 		logo.setLayoutY(311.0);
 		logo.setTranslateY(-60);
 
-		Media defaultButtonSound = new Media(new File("src/defaultButtonSound.mp3").toURI().toString());
+		Media defaultButtonSound = new Media(new File("src/assets/audio/button-sounds/defaultButtonSound.mp3").toURI().toString());
 		MediaPlayer mediaPlayer = new MediaPlayer(defaultButtonSound);
-		Media modeButtonSound = new Media(new File("src/modeButtonSound.mp3").toURI().toString());
+		Media modeButtonSound = new Media(new File("src/assets/audio/button-sounds/GameModeButtonSound.mp3").toURI().toString());
 		MediaPlayer mediaPlayer1 = new MediaPlayer(modeButtonSound);
 		Slider systemVolume = new Slider(0, 1, 0.5);
 		systemVolume.setShowTickMarks(true);
@@ -272,10 +272,10 @@ public class View extends Application {
 		systemVolume.setMaxWidth(100);
 		mediaPlayer.volumeProperty().bind(systemVolume.valueProperty());
 		mediaPlayer1.volumeProperty().bind(systemVolume.valueProperty());
-		Media defaultMusic = new Media(new File("src/VanguardOfHope.mp3").toURI().toString());
+		Media defaultMusic = new Media(new File("src/assets/audio/background-music/VanguardOfHope.mp3").toURI().toString());
 		mediaPlayer2 = new MediaPlayer(defaultMusic);
 		mediaPlayer2.setCycleCount(MediaPlayer.INDEFINITE);
-		Media grumblingMusic = new Media(new File("src/BarbariansAtTheGate.mp3").toURI().toString());
+		Media grumblingMusic = new Media(new File("src/assets/audio/background-music/BarbariansAtTheGate.mp3").toURI().toString());
 		mediaPlayer3 = new MediaPlayer(grumblingMusic);
 		mediaPlayer3.setCycleCount(MediaPlayer.INDEFINITE);
 		Slider musicVolume = new Slider(0, 1, 0.5);
@@ -298,7 +298,7 @@ public class View extends Application {
 		musVol.setStyle("-fx-font-family: 'Space Games'; -fx-font-size: 30; ");
 		musVol.setTextFill(javafx.scene.paint.Color.WHITE);
 		musicVol.getChildren().addAll(musVol,musicVolume);
-		Image blurredImage = new Image("blurredBackg.jpeg");
+		Image blurredImage = new Image(getClass().getResourceAsStream("/assets/images/ui/backgrounds/BlurredBackground.jpeg"));
 		VBox settingsSliders = new VBox(30);
 		settingsSliders.setLayoutX(750);
 		settingsSliders.setLayoutY(500);
@@ -322,7 +322,7 @@ public class View extends Application {
 		backButtonSettings.setOnMouseExited(e -> backButtonSettings.setEffect(null));
 		backButtonSettings.setTranslateX(140);
 		backButtonSettings.setStyle("-fx-font-family: 'Space Games'; -fx-font-size: 24; ");
-		Image settingsIc = new Image("Settings.png");
+		Image settingsIc = new Image(getClass().getResourceAsStream("/assets/images/ui/buttons/SettingsButton.png"));
 		ImageView settingsIcon = new ImageView(settingsIc);
 		settingsIcon.setFitHeight(40);
 		settingsIcon.setFitWidth(40);
@@ -792,7 +792,7 @@ public class View extends Application {
 		Scene weaponshop = new Scene(weapon,1920,1080);
 		Cursor = new ImageCursor(cursorImage, cursorImage.getWidth()/2, cursorImage.getHeight()/2);
 		weaponshop.setCursor(Cursor);
-		Image weaponshopimage = new Image("shop layout.jpeg");
+		Image weaponshopimage = new Image(getClass().getResourceAsStream("/assets/images/ui/backgrounds/ShopLayout.jpeg"));
 		ImageView weaponShopImageView = new ImageView(weaponshopimage);
 		weaponshop.addEventFilter(KeyEvent.KEY_PRESSED, event -> {
 			if (event.getCode() == KeyCode.ESCAPE) {
@@ -823,10 +823,10 @@ public class View extends Application {
 		currentRescourcesInShop.setTranslateX(-400);
 		currentRescourcesInShop.setTranslateY(-400);
 		weapon.getChildren().addAll(purchasePiercing,purchaseSniper,purchaseVolley,purchaseWallTrap,currentRescourcesInShop, selectLane);
-		Image piercingCannon = new Image("weapon1.png");
-		Image sniperCannon = new Image("weapon2.png");
-		Image volleySpreadCannon = new Image("weapon3.png");
-		Image wallTrap = new Image("weapon4.png");
+		Image piercingCannon = new Image(getClass().getResourceAsStream("/assets/images/weapons/Weapon1.png"));
+		Image sniperCannon = new Image(getClass().getResourceAsStream("/assets/images/weapons/Weapon2.png"));
+		Image volleySpreadCannon = new Image(getClass().getResourceAsStream("/assets/images/weapons/Weapon3.png"));
+		Image wallTrap = new Image(getClass().getResourceAsStream("/assets/images/weapons/Weapon4.png"));
 
 		//first button
 		purchasePiercing.setTranslateX(-435);
@@ -1813,10 +1813,10 @@ public class View extends Application {
 
 	public void spawnTitansi()
 	{
-		Image pureTitan = new Image("PureTitan.png");
-		Image abnormalTitan = new Image("AbnormalTitan.png");
-		Image armoredTitan = new Image("ArmoredTitan.png");
-		Image colossalTitan = new Image("ColossalTitan.png");
+		Image pureTitan = new Image(getClass().getResourceAsStream("/assets/images/titans/PureTitan.png"));
+		Image abnormalTitan = new Image(getClass().getResourceAsStream("/assets/images/titans/AbnormalTitan.png"));
+		Image armoredTitan = new Image(getClass().getResourceAsStream("/assets/images/titans/ArmoredTitan.png"));
+		Image colossalTitan = new Image(getClass().getResourceAsStream("/assets/images/titans/ColossalTitan.png"));
 		Iterator<Titan> lane1Titans =  battle.getOriginalLanes().get(0).getTitans().iterator();
 		Iterator<Titan> lane2Titans =  battle.getOriginalLanes().get(1).getTitans().iterator();
 		Iterator<Titan> lane3Titans =  battle.getOriginalLanes().get(2).getTitans().iterator();
@@ -2037,10 +2037,10 @@ public class View extends Application {
 
 	public void spawnTitansiHard()
 	{
-		Image pureTitan = new Image("PureTitan.png");
-		Image abnormalTitan = new Image("AbnormalTitan.png");
-		Image armoredTitan = new Image("ArmoredTitan.png");
-		Image colossalTitan = new Image("ColossalTitan.png");
+		Image pureTitan = new Image(getClass().getResourceAsStream("/assets/images/titans/PureTitan.png"));
+		Image abnormalTitan = new Image(getClass().getResourceAsStream("/assets/images/titans/AbnormalTitan.png"));
+		Image armoredTitan = new Image(getClass().getResourceAsStream("/assets/images/titans/ArmoredTitan.png"));
+		Image colossalTitan = new Image(getClass().getResourceAsStream("/assets/images/titans/ColossalTitan.png"));
 		Iterator<Titan> lane1Titans =  battle.getOriginalLanes().get(0).getTitans().iterator();
 		Iterator<Titan> lane2Titans =  battle.getOriginalLanes().get(1).getTitans().iterator();
 		Iterator<Titan> lane3Titans =  battle.getOriginalLanes().get(2).getTitans().iterator();
@@ -2511,7 +2511,7 @@ public class View extends Application {
 	private void displayAlert(String title, String message) {
 		Stage alertStage = new Stage();
 		alertStage.setTitle(title);
-		alertStage.getIcons().add(new Image("icon.jpeg"));
+		alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/assets/images/ui/icons/Icon.jpeg")));
 		Label label = new Label(message);
 		label.setStyle("-fx-font-family: 'Space Games'; -fx-font-size: 14; ");
 		Button closeButton = new Button("Back");
@@ -2532,7 +2532,7 @@ public class View extends Application {
 	private void displayAlertGameOver(String title, String message) {
 		Stage alertStage = new Stage();
 		alertStage.setTitle(title);
-		alertStage.getIcons().add(new Image("icon.jpeg"));
+		alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/assets/images/ui/icons/Icon.jpeg")));
 		Label label = new Label(message);
 		label.setStyle("-fx-font-family: 'Space Games'; -fx-font-size: 14; ");
 		Button closeButton = new Button("Play Again");
@@ -2546,7 +2546,7 @@ public class View extends Application {
 			lane1titans = new FlowPane();
 			lane2titans = new FlowPane();
 			lane3titans = new FlowPane();
-			lane = new Image("lane with wall.jpeg");
+			lane = new Image(getClass().getResourceAsStream("/assets/images/ui/lanes/LaneAndWall.jpeg"));
 			lane1 = new ImageView(lane);
 			lane2 = new ImageView(lane);
 			lane3 = new ImageView(lane);

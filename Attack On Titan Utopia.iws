@@ -6,11 +6,32 @@
   <component name="ChangeListManager">
     <list default="true" id="1945ec13-6c83-4a81-bf19-b33c7d94973c" name="Changes" comment="Enhance weapon spawning: Start at the edge of the wall for more realism&#10;- Adjusted weapon spawn points to start at the edge of the wall, improving the realism of their appearance for both Easy and Hard Game Modes.&#10;- Removed unnecessary comment to clean up the code.">
       <change beforePath="$PROJECT_DIR$/Attack On Titan Utopia.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Attack On Titan Utopia.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AbnormalTitan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ArmoredTitan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BarbariansAtTheGate.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ColossalTitan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cursor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InstructionsImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Intro.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Message.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PureTitan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpaceGames.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VanguardOfHope.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blurredBackg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/defaultButtonSound.mp3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/gui/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/gui/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weapon1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/weapon1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weapon2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/weapon2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weapon3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/weapon3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weapon4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/weapon4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icon.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lane with wall.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modeButtonSound.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shop Layout.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon4.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +52,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="5-fixing-titans-movement" />
+        <entry key="$PROJECT_DIR$" value="4-fixing-settings-page" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,31 +82,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.View (1).executor": "Run",
-    "Application.View.executor": "Run",
-    "Notification.DisplayName-DoNotAsk-Legacy Library": "Legacy library depends on IDE installation",
-    "Notification.DoNotAsk-Legacy Library": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/joman/Downloads/sdk intellj/javafx-sdk-22.0.2/lib/javafx.swing.jar",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.tools",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.View (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.View.executor&quot;: &quot;Run&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Legacy Library&quot;: &quot;Legacy library depends on IDE installation&quot;,
+    &quot;Notification.DoNotAsk-Legacy Library&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/joman/Downloads/sdk intellj/javafx-sdk-22.0.2/lib/javafx.swing.jar&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Yehia\Documents\CS3\IntelliJ\Attack On Titan Utopia\src" />
